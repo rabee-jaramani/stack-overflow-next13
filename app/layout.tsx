@@ -1,11 +1,16 @@
+import { ClerkProvider } from "@clerk/nextjs";
 import React from "react";
-import "../styles/theme.css";
-const Layout = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <main className="flex min-h-screen w-full items-center justify-center">
-      {children}
-    </main>
-  );
-};
 
-export default Layout;
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <ClerkProvider>
+      <html lang="en">
+        <body>{children}</body>
+      </html>
+    </ClerkProvider>
+  );
+}
