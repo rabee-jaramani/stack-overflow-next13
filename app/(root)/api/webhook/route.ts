@@ -60,6 +60,7 @@ export async function POST(req: Request) {
       evt.data;
 
     // Create a new user in your database
+    console.log("trying to create userXXXXXX", evt.data);
     const mongoUser = await createUser({
       clerkId: id,
       name: `${first_name}${last_name ? ` ${last_name}` : ""}`,
