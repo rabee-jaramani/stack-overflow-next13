@@ -1,5 +1,5 @@
 module.exports = {
     images: {
-        domains: ['fastly.picsum.photos'],
+        domains: ['fastly.picsum.photos', 'img.clerk.com'],
     },
 };
