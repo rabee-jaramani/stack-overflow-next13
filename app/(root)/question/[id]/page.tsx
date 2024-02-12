@@ -12,7 +12,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const Page = async ({ params, searchParams }) => {
+interface Props {
+  params: {
+    id: string;
+  };
+  searchParams: any; // Adjust the type according to your needs
+}
+const Page = async ({ params, searchParams }: Props) => {
   const { userId: clerkId } = auth();
 
   let mongoUser;
